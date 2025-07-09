@@ -1,0 +1,18 @@
+{
+	"name": "@pub-sub/broadcast",
+	"version": "0.0.0",
+	"module": "src/index.ts",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "bun run --hot src/index.ts",
+		"lint": "biome lint ./src"
+	},
+	"devDependencies": {
+		"@pub-sub/tsconfig": "catalog:",
+		"@types/bun": "catalog:"
+	},
+	"peerDependencies": {
+		"@typescript/native-preview": "catalog:"
+	}
+}

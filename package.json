@@ -1,0 +1,32 @@
+{
+	"name": "pub-sub",
+	"private": true,
+	"workspaces": {
+		"packages": [
+			"packages/*",
+			"servers/*"
+		],
+		"catalog": {
+			"@typescript/native-preview": "7.0.0-dev.20250709.1",
+			"@pub-sub/tsconfig": "workspace:*",
+			"@types/bun": "1.2.18",
+			"@biomejs/biome": "2.0.5",
+			"turbo": "2.5.4"
+		}
+	},
+	"scripts": {
+		"dev": "turbo dev",
+		"format": "biome format --write .",
+		"lint": "turbo lint"
+	},
+	"devDependencies": {
+		"@pub-sub/tsconfig": "catalog:",
+		"@types/bun": "catalog:",
+		"@biomejs/biome": "catalog:",
+		"turbo": "catalog:"
+	},
+	"peerDependencies": {
+		"@typescript/native-preview": "catalog:"
+	},
+	"packageManager": "bun@1.2.18"
+}

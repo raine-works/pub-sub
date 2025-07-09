@@ -1,0 +1,32 @@
+{
+	"name": "Pub/Sub Workspace",
+	"dockerComposeFile": "docker-compose.yaml",
+	"service": "workspace",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"features": {
+		"ghcr.io/raine-works/devcontainer-features/bun:1": { "version": "1.2.18" },
+		"ghcr.io/devcontainers-extra/features/turborepo-npm:1": {
+			"version": "2.5.4"
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+	"mounts": [
+		"source=${localEnv:HOME}/.config/gh,target=/home/vscode/.config/gh,type=bind"
+	],
+	"containerEnv": {
+		"NODE_ENV": "development",
+		"TZ": "UTC"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"TypeScriptTeam.native-preview",
+				"yoavbls.pretty-ts-errors",
+				"mhutchie.git-graph",
+				"waderyan.gitblame",
+				"oven.bun-vscode",
+				"biomejs.biome"
+			]
+		}
+	}
+}

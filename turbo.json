@@ -1,0 +1,15 @@
+{
+	"$schema": "https://turborepo.org/schema.json",
+	"ui": "tui",
+	"globalPassThroughEnv": ["GITHUB_TOKEN"],
+	"globalEnv": ["HOME", "NODE_ENV", "TZ"],
+	"tasks": {
+		"dev": {
+			"persistent": true,
+			"cache": false
+		},
+		"lint": {
+			"cache": false
+		}
+	}
+}
